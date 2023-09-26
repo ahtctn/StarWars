@@ -29,6 +29,12 @@
 		7B4815712AC314DE002004DA /* VehiclesResultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4815702AC314DE002004DA /* VehiclesResultsModel.swift */; };
 		7B4815762AC31589002004DA /* StarshipsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4815752AC31589002004DA /* StarshipsModel.swift */; };
 		7B4815782AC31590002004DA /* StarshipsResultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4815772AC31590002004DA /* StarshipsResultsModel.swift */; };
+		7B4815802AC3192D002004DA /* StarshipsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B48157F2AC3192D002004DA /* StarshipsViewModel.swift */; };
+		7B4815822AC31E38002004DA /* VehiclesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4815812AC31E38002004DA /* VehiclesViewModel.swift */; };
+		7B4815842AC31E3F002004DA /* SpeciesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4815832AC31E3F002004DA /* SpeciesViewModel.swift */; };
+		7B4815862AC31E47002004DA /* FilmsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4815852AC31E47002004DA /* FilmsViewModel.swift */; };
+		7B4815882AC31E51002004DA /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4815872AC31E51002004DA /* PeopleViewModel.swift */; };
+		7B48158A2AC31E58002004DA /* PlanetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4815892AC31E58002004DA /* PlanetsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +62,12 @@
 		7B4815702AC314DE002004DA /* VehiclesResultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesResultsModel.swift; sourceTree = "<group>"; };
 		7B4815752AC31589002004DA /* StarshipsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipsModel.swift; sourceTree = "<group>"; };
 		7B4815772AC31590002004DA /* StarshipsResultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipsResultsModel.swift; sourceTree = "<group>"; };
+		7B48157F2AC3192D002004DA /* StarshipsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipsViewModel.swift; sourceTree = "<group>"; };
+		7B4815812AC31E38002004DA /* VehiclesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesViewModel.swift; sourceTree = "<group>"; };
+		7B4815832AC31E3F002004DA /* SpeciesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesViewModel.swift; sourceTree = "<group>"; };
+		7B4815852AC31E47002004DA /* FilmsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsViewModel.swift; sourceTree = "<group>"; };
+		7B4815872AC31E51002004DA /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
+		7B4815892AC31E58002004DA /* PlanetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +124,12 @@
 		7B48154A2AC1C327002004DA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				7B48157E2AC3191B002004DA /* StarshipsViewModel */,
+				7B48157D2AC31915002004DA /* VehiclesViewModel */,
+				7B48157C2AC3190F002004DA /* SpeciesViewModel */,
+				7B48157B2AC31909002004DA /* FilmsViewModel */,
+				7B48157A2AC31905002004DA /* PeopleViewModel */,
+				7B4815792AC318FB002004DA /* PlanetsViewModel */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -227,6 +245,54 @@
 			path = StarshipsModel;
 			sourceTree = "<group>";
 		};
+		7B4815792AC318FB002004DA /* PlanetsViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7B4815892AC31E58002004DA /* PlanetsViewModel.swift */,
+			);
+			path = PlanetsViewModel;
+			sourceTree = "<group>";
+		};
+		7B48157A2AC31905002004DA /* PeopleViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7B4815872AC31E51002004DA /* PeopleViewModel.swift */,
+			);
+			path = PeopleViewModel;
+			sourceTree = "<group>";
+		};
+		7B48157B2AC31909002004DA /* FilmsViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7B4815852AC31E47002004DA /* FilmsViewModel.swift */,
+			);
+			path = FilmsViewModel;
+			sourceTree = "<group>";
+		};
+		7B48157C2AC3190F002004DA /* SpeciesViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7B4815832AC31E3F002004DA /* SpeciesViewModel.swift */,
+			);
+			path = SpeciesViewModel;
+			sourceTree = "<group>";
+		};
+		7B48157D2AC31915002004DA /* VehiclesViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7B4815812AC31E38002004DA /* VehiclesViewModel.swift */,
+			);
+			path = VehiclesViewModel;
+			sourceTree = "<group>";
+		};
+		7B48157E2AC3191B002004DA /* StarshipsViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7B48157F2AC3192D002004DA /* StarshipsViewModel.swift */,
+			);
+			path = StarshipsViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -299,10 +365,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B4815602AC31214002004DA /* PeopleModel.swift in Sources */,
+				7B4815882AC31E51002004DA /* PeopleViewModel.swift in Sources */,
 				7B48155D2AC310C4002004DA /* PlanetsResultsModel.swift in Sources */,
+				7B4815822AC31E38002004DA /* VehiclesViewModel.swift in Sources */,
 				7B48156F2AC314D7002004DA /* VehiclesModel.swift in Sources */,
 				7B4815762AC31589002004DA /* StarshipsModel.swift in Sources */,
+				7B4815802AC3192D002004DA /* StarshipsViewModel.swift in Sources */,
 				7B48156A2AC3139C002004DA /* SpeciesModel.swift in Sources */,
+				7B48158A2AC31E58002004DA /* PlanetsViewModel.swift in Sources */,
 				7B48153A2AC1C30E002004DA /* ViewController.swift in Sources */,
 				7B4815652AC312F0002004DA /* FilmsModel.swift in Sources */,
 				7B4815782AC31590002004DA /* StarshipsResultsModel.swift in Sources */,
@@ -315,6 +385,8 @@
 				7B48155B2AC3109A002004DA /* PlanetsModel.swift in Sources */,
 				7B4815582AC1C6F9002004DA /* ServiceError.swift in Sources */,
 				7B4815672AC31304002004DA /* FilmsResultsModel.swift in Sources */,
+				7B4815862AC31E47002004DA /* FilmsViewModel.swift in Sources */,
+				7B4815842AC31E3F002004DA /* SpeciesViewModel.swift in Sources */,
 				7B4815562AC1C577002004DA /* Constants.swift in Sources */,
 				7B48156C2AC313A2002004DA /* SpeciesResultsModel.swift in Sources */,
 			);
