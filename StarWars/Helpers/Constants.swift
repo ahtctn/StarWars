@@ -18,5 +18,11 @@ enum Constants {
         static let vehicles: String = "vehicles/"
         static let starships: String = "starships/"
     }
+    
+    enum EventMessages {
+        static let loading: String = "Data is Loading"
+        static let stopLoading: String = "Data Stopped Loading"
+        static let dataLoaded: String = "Data Loaded"
+    }
 }
 

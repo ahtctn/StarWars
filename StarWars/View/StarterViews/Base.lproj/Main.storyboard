@@ -1,24 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8y4-t3-UoV">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Species-->
+        <scene sceneID="7qh-pc-2tf">
+            <objects>
+                <viewController id="c4w-x6-xM2" customClass="SpeciesViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GMU-pF-gTq">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6vS-KD-Q8l"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Species" image="note.text" catalog="system" id="RdT-n2-YLp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yp0-lT-Vev" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-632" y="508"/>
+        </scene>
+        <!--Films-->
+        <scene sceneID="C4k-Zo-1lI">
+            <objects>
+                <viewController id="Fke-ZJ-M4r" customClass="FilmsViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kFu-oN-Xqc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="mFp-Sb-rEO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Films" image="tv" catalog="system" id="Ymu-ND-Gvc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zk1-GP-hD4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131" y="-184"/>
+        </scene>
+        <!--Vehicles-->
+        <scene sceneID="6pG-Ai-DDI">
+            <objects>
+                <viewController id="Qbu-Y3-ibO" customClass="VehiclesViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A6I-fr-qAo">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qR5-1C-gG9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Vehicles" image="car" catalog="system" id="SRe-jt-Ynt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YdP-u4-a0d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-632" y="-890"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="HFt-Qb-hOo">
+            <objects>
+                <tabBarController id="8y4-t3-UoV" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dvx-rk-0d2">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Qbu-Y3-ibO" kind="relationship" relationship="viewControllers" id="Fbi-Zg-mAR"/>
+                        <segue destination="c4w-x6-xM2" kind="relationship" relationship="viewControllers" id="nJP-I5-a2g"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="vdW-1B-ixn"/>
+                        <segue destination="Fke-ZJ-M4r" kind="relationship" relationship="viewControllers" id="yDb-WC-rQd"/>
+                        <segue destination="ohL-fL-CZj" kind="relationship" relationship="viewControllers" id="poP-Su-9jR"/>
+                        <segue destination="h61-xG-TRd" kind="relationship" relationship="viewControllers" id="kwQ-nk-fs0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="01X-Dq-JIi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1438" y="-184"/>
+        </scene>
+        <!--Starships-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="StarshipsViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Starships" image="star" catalog="system" id="obq-m1-Abb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-632" y="-184"/>
+        </scene>
+        <!--Planets-->
+        <scene sceneID="nJt-ch-yWC">
+            <objects>
+                <viewController id="h61-xG-TRd" customClass="PlanetsViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bvi-aq-hq5">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Zxd-PO-sL5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Planets" image="circle.fill" catalog="system" id="kag-6R-ka4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PhW-Wc-d3F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131" y="508"/>
+        </scene>
+        <!--People-->
+        <scene sceneID="rLY-Ni-G7p">
+            <objects>
+                <viewController id="ohL-fL-CZj" customClass="PeopleViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TPW-DB-ZBD">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="iuq-J1-Z1k"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="People" image="person.3.fill" catalog="system" id="LN5-zo-a4F"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aQI-0L-wqt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-890"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="car" catalog="system" width="128" height="95"/>
+        <image name="circle.fill" catalog="system" width="128" height="123"/>
+        <image name="note.text" catalog="system" width="128" height="107"/>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="tv" catalog="system" width="128" height="95"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

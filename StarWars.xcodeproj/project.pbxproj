@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		7B4815362AC1C30E002004DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4815352AC1C30E002004DA /* AppDelegate.swift */; };
 		7B4815382AC1C30E002004DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4815372AC1C30E002004DA /* SceneDelegate.swift */; };
-		7B48153A2AC1C30E002004DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4815392AC1C30E002004DA /* ViewController.swift */; };
+		7B48153A2AC1C30E002004DA /* StarshipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4815392AC1C30E002004DA /* StarshipsViewController.swift */; };
 		7B48153D2AC1C30E002004DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B48153B2AC1C30E002004DA /* Main.storyboard */; };
 		7B48153F2AC1C30F002004DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B48153E2AC1C30F002004DA /* Assets.xcassets */; };
 		7B4815422AC1C30F002004DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B4815402AC1C30F002004DA /* LaunchScreen.storyboard */; };
@@ -35,13 +35,18 @@
 		7B4815862AC31E47002004DA /* FilmsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4815852AC31E47002004DA /* FilmsViewModel.swift */; };
 		7B4815882AC31E51002004DA /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4815872AC31E51002004DA /* PeopleViewModel.swift */; };
 		7B48158A2AC31E58002004DA /* PlanetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4815892AC31E58002004DA /* PlanetsViewModel.swift */; };
+		7B48158C2AC3220C002004DA /* VehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B48158B2AC3220C002004DA /* VehiclesViewController.swift */; };
+		7B48158E2AC32215002004DA /* SpeciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B48158D2AC32215002004DA /* SpeciesViewController.swift */; };
+		7B4815902AC32228002004DA /* FilmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B48158F2AC32228002004DA /* FilmsViewController.swift */; };
+		7B4815922AC3222E002004DA /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4815912AC3222E002004DA /* PeopleViewController.swift */; };
+		7B4815942AC32239002004DA /* PlanetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4815932AC32239002004DA /* PlanetsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7B4815322AC1C30E002004DA /* StarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B4815352AC1C30E002004DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B4815372AC1C30E002004DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7B4815392AC1C30E002004DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7B4815392AC1C30E002004DA /* StarshipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipsViewController.swift; sourceTree = "<group>"; };
 		7B48153C2AC1C30E002004DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7B48153E2AC1C30F002004DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B4815412AC1C30F002004DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -68,6 +73,11 @@
 		7B4815852AC31E47002004DA /* FilmsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsViewModel.swift; sourceTree = "<group>"; };
 		7B4815872AC31E51002004DA /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
 		7B4815892AC31E58002004DA /* PlanetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsViewModel.swift; sourceTree = "<group>"; };
+		7B48158B2AC3220C002004DA /* VehiclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesViewController.swift; sourceTree = "<group>"; };
+		7B48158D2AC32215002004DA /* SpeciesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesViewController.swift; sourceTree = "<group>"; };
+		7B48158F2AC32228002004DA /* FilmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsViewController.swift; sourceTree = "<group>"; };
+		7B4815912AC3222E002004DA /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		7B4815932AC32239002004DA /* PlanetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,7 +187,12 @@
 		7B48154F2AC1C354002004DA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7B4815392AC1C30E002004DA /* ViewController.swift */,
+				7B4815392AC1C30E002004DA /* StarshipsViewController.swift */,
+				7B48158B2AC3220C002004DA /* VehiclesViewController.swift */,
+				7B48158D2AC32215002004DA /* SpeciesViewController.swift */,
+				7B48158F2AC32228002004DA /* FilmsViewController.swift */,
+				7B4815912AC3222E002004DA /* PeopleViewController.swift */,
+				7B4815932AC32239002004DA /* PlanetsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -367,17 +382,22 @@
 				7B4815602AC31214002004DA /* PeopleModel.swift in Sources */,
 				7B4815882AC31E51002004DA /* PeopleViewModel.swift in Sources */,
 				7B48155D2AC310C4002004DA /* PlanetsResultsModel.swift in Sources */,
+				7B48158C2AC3220C002004DA /* VehiclesViewController.swift in Sources */,
 				7B4815822AC31E38002004DA /* VehiclesViewModel.swift in Sources */,
 				7B48156F2AC314D7002004DA /* VehiclesModel.swift in Sources */,
 				7B4815762AC31589002004DA /* StarshipsModel.swift in Sources */,
 				7B4815802AC3192D002004DA /* StarshipsViewModel.swift in Sources */,
+				7B4815922AC3222E002004DA /* PeopleViewController.swift in Sources */,
 				7B48156A2AC3139C002004DA /* SpeciesModel.swift in Sources */,
 				7B48158A2AC31E58002004DA /* PlanetsViewModel.swift in Sources */,
-				7B48153A2AC1C30E002004DA /* ViewController.swift in Sources */,
+				7B48153A2AC1C30E002004DA /* StarshipsViewController.swift in Sources */,
 				7B4815652AC312F0002004DA /* FilmsModel.swift in Sources */,
 				7B4815782AC31590002004DA /* StarshipsResultsModel.swift in Sources */,
+				7B4815942AC32239002004DA /* PlanetsViewController.swift in Sources */,
 				7B4815362AC1C30E002004DA /* AppDelegate.swift in Sources */,
+				7B4815902AC32228002004DA /* FilmsViewController.swift in Sources */,
 				7B4815542AC1C3D5002004DA /* NetworkManager.swift in Sources */,
+				7B48158E2AC32215002004DA /* SpeciesViewController.swift in Sources */,
 				7B4815522AC1C3CE002004DA /* Endpoint.swift in Sources */,
 				7B4815712AC314DE002004DA /* VehiclesResultsModel.swift in Sources */,
 				7B4815622AC31239002004DA /* PeopleResultsModel.swift in Sources */,
