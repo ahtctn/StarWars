@@ -14,7 +14,7 @@ class StarshipsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         observeEvent()
-        deneme()
+        //deneme()
     }
     
     private func observeEvent() {
@@ -46,6 +46,9 @@ class StarshipsViewController: UIViewController {
             
             for starship in starshipsData {
                 print(starship.cargoCapacity)
+                print("Films: \(starship.films)")
+                print("Name: \(starship.name)")
+                print("Class: \(starship.starshipClass)")
                 print("açıldı")
             }
             
