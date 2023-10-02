@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoriesView" customModule="StarWars" customModuleProvider="target">
+            <connections>
+                <outlet property="categoriesImage" destination="ZFI-gC-oiL" id="Dnx-U3-8io"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZFI-gC-oiL">
+                    <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVB-Sw-uIG">
+                    <rect key="frame" x="20" y="0.0" width="350" height="100"/>
+                    <color key="tintColor" systemColor="systemYellowColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button">
+                        <fontDescription key="titleFontDescription" name="RubikMonoOne-Regular" family="Rubik Mono One" pointSize="48"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="categoriesButtonTapped:" destination="-1" eventType="touchUpInside" id="oZz-ny-qlB"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="PVB-Sw-uIG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9oe-32-TDX"/>
+                <constraint firstItem="PVB-Sw-uIG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="FmT-oi-oCC"/>
+                <constraint firstItem="ZFI-gC-oiL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FpP-xf-bdc"/>
+                <constraint firstAttribute="bottom" secondItem="ZFI-gC-oiL" secondAttribute="bottom" id="Mbc-jP-mUP"/>
+                <constraint firstItem="ZFI-gC-oiL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="P3J-qx-IHO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ZFI-gC-oiL" secondAttribute="trailing" id="hpV-uf-bTU"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PVB-Sw-uIG" secondAttribute="trailing" constant="20" id="tcC-gC-Yiu"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="PVB-Sw-uIG" secondAttribute="bottom" id="ypX-ST-VCw"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="44.615384615384613" y="20.616113744075829"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

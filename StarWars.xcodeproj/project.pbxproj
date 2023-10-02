@@ -19,6 +19,7 @@
 		7B1E62E02AC445C800F5A2D5 /* PeopleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B1E62DE2AC445C800F5A2D5 /* PeopleTableViewCell.xib */; };
 		7B1E62E32AC445D300F5A2D5 /* PlanetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E62E12AC445D300F5A2D5 /* PlanetsTableViewCell.swift */; };
 		7B1E62E42AC445D300F5A2D5 /* PlanetsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B1E62E22AC445D300F5A2D5 /* PlanetsTableViewCell.xib */; };
+		7B1E62E72AC446AE00F5A2D5 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E62E62AC446AE00F5A2D5 /* InitialViewController.swift */; };
 		7B4815362AC1C30E002004DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4815352AC1C30E002004DA /* AppDelegate.swift */; };
 		7B4815382AC1C30E002004DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4815372AC1C30E002004DA /* SceneDelegate.swift */; };
 		7B48153A2AC1C30E002004DA /* StarshipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4815392AC1C30E002004DA /* StarshipsViewController.swift */; };
@@ -52,6 +53,13 @@
 		7B4815902AC32228002004DA /* FilmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B48158F2AC32228002004DA /* FilmsViewController.swift */; };
 		7B4815922AC3222E002004DA /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4815912AC3222E002004DA /* PeopleViewController.swift */; };
 		7B4815942AC32239002004DA /* PlanetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4815932AC32239002004DA /* PlanetsViewController.swift */; };
+		7BB7895F2ACAE461001032BC /* CategoriesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BB7895E2ACAE461001032BC /* CategoriesView.xib */; };
+		7BB789612ACAE518001032BC /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB789602ACAE518001032BC /* CategoriesView.swift */; };
+		7BBDCE452ACAE8CE0066B390 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7BBDCE442ACAE8CE0066B390 /* Kingfisher */; };
+		7BBDCE482ACAE9500066B390 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBDCE472ACAE9500066B390 /* UIImageViewExtension.swift */; };
+		7BBDCE4D2ACB01030066B390 /* RubikMonoOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BBDCE4A2ACB01030066B390 /* RubikMonoOne-Regular.ttf */; };
+		7BBDCE4E2ACB01030066B390 /* ToonyLine.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7BBDCE4B2ACB01030066B390 /* ToonyLine.otf */; };
+		7BBDCE4F2ACB01030066B390 /* Monoton-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BBDCE4C2ACB01030066B390 /* Monoton-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +75,7 @@
 		7B1E62DE2AC445C800F5A2D5 /* PeopleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleTableViewCell.xib; sourceTree = "<group>"; };
 		7B1E62E12AC445D300F5A2D5 /* PlanetsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsTableViewCell.swift; sourceTree = "<group>"; };
 		7B1E62E22AC445D300F5A2D5 /* PlanetsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanetsTableViewCell.xib; sourceTree = "<group>"; };
+		7B1E62E62AC446AE00F5A2D5 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		7B4815322AC1C30E002004DA /* StarWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B4815352AC1C30E002004DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B4815372AC1C30E002004DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +111,12 @@
 		7B48158F2AC32228002004DA /* FilmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsViewController.swift; sourceTree = "<group>"; };
 		7B4815912AC3222E002004DA /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		7B4815932AC32239002004DA /* PlanetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsViewController.swift; sourceTree = "<group>"; };
+		7BB7895E2ACAE461001032BC /* CategoriesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesView.xib; sourceTree = "<group>"; };
+		7BB789602ACAE518001032BC /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		7BBDCE472ACAE9500066B390 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		7BBDCE4A2ACB01030066B390 /* RubikMonoOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RubikMonoOne-Regular.ttf"; sourceTree = "<group>"; };
+		7BBDCE4B2ACB01030066B390 /* ToonyLine.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ToonyLine.otf; sourceTree = "<group>"; };
+		7BBDCE4C2ACB01030066B390 /* Monoton-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Monoton-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BBDCE452ACAE8CE0066B390 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +191,15 @@
 			path = StarshipsViews;
 			sourceTree = "<group>";
 		};
+		7B1E62E52AC4469300F5A2D5 /* InitialView */ = {
+			isa = PBXGroup;
+			children = (
+				7B1E62E62AC446AE00F5A2D5 /* InitialViewController.swift */,
+				7BB789552AC70308001032BC /* CategoriesViews */,
+			);
+			path = InitialView;
+			sourceTree = "<group>";
+		};
 		7B4815292AC1C30E002004DA = {
 			isa = PBXGroup;
 			children = (
@@ -194,12 +219,14 @@
 		7B4815342AC1C30E002004DA /* StarWars */ = {
 			isa = PBXGroup;
 			children = (
+				7BBDCE462ACAE91A0066B390 /* KingfisherImplementation */,
 				7B48154C2AC1C333002004DA /* Services */,
 				7B48154E2AC1C33F002004DA /* Delegations */,
 				7B48154D2AC1C33C002004DA /* Helpers */,
 				7B48154B2AC1C330002004DA /* Model */,
 				7B48154A2AC1C327002004DA /* ViewModel */,
 				7B4815492AC1C31F002004DA /* View */,
+				7BBDCE492ACB00E40066B390 /* Fonts */,
 				7B48153E2AC1C30F002004DA /* Assets.xcassets */,
 				7B4815432AC1C30F002004DA /* Info.plist */,
 			);
@@ -271,6 +298,7 @@
 		7B48154F2AC1C354002004DA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7B1E62E52AC4469300F5A2D5 /* InitialView */,
 				7B1E62CB2AC4448100F5A2D5 /* StarshipsViews */,
 				7B1E62CA2AC4447B00F5A2D5 /* VehiclesViews */,
 				7B1E62C92AC4447600F5A2D5 /* SpeciesViews */,
@@ -392,6 +420,33 @@
 			path = StarshipsViewModel;
 			sourceTree = "<group>";
 		};
+		7BB789552AC70308001032BC /* CategoriesViews */ = {
+			isa = PBXGroup;
+			children = (
+				7BB7895E2ACAE461001032BC /* CategoriesView.xib */,
+				7BB789602ACAE518001032BC /* CategoriesView.swift */,
+			);
+			path = CategoriesViews;
+			sourceTree = "<group>";
+		};
+		7BBDCE462ACAE91A0066B390 /* KingfisherImplementation */ = {
+			isa = PBXGroup;
+			children = (
+				7BBDCE472ACAE9500066B390 /* UIImageViewExtension.swift */,
+			);
+			path = KingfisherImplementation;
+			sourceTree = "<group>";
+		};
+		7BBDCE492ACB00E40066B390 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7BBDCE4C2ACB01030066B390 /* Monoton-Regular.ttf */,
+				7BBDCE4A2ACB01030066B390 /* RubikMonoOne-Regular.ttf */,
+				7BBDCE4B2ACB01030066B390 /* ToonyLine.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -408,6 +463,9 @@
 			dependencies = (
 			);
 			name = StarWars;
+			packageProductDependencies = (
+				7BBDCE442ACAE8CE0066B390 /* Kingfisher */,
+			);
 			productName = StarWars;
 			productReference = 7B4815322AC1C30E002004DA /* StarWars.app */;
 			productType = "com.apple.product-type.application";
@@ -436,6 +494,9 @@
 				Base,
 			);
 			mainGroup = 7B4815292AC1C30E002004DA;
+			packageReferences = (
+				7BBDCE432ACAE8CE0066B390 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 7B4815332AC1C30E002004DA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -456,9 +517,13 @@
 				7B48153F2AC1C30F002004DA /* Assets.xcassets in Resources */,
 				7B1E62E42AC445D300F5A2D5 /* PlanetsTableViewCell.xib in Resources */,
 				7B48153D2AC1C30E002004DA /* Main.storyboard in Resources */,
+				7BB7895F2ACAE461001032BC /* CategoriesView.xib in Resources */,
+				7BBDCE4D2ACB01030066B390 /* RubikMonoOne-Regular.ttf in Resources */,
 				7B1E62D82AC445AC00F5A2D5 /* SpeciesTableViewCell.xib in Resources */,
+				7BBDCE4E2ACB01030066B390 /* ToonyLine.otf in Resources */,
 				7B1E62DC2AC445B900F5A2D5 /* FilmsTableViewCell.xib in Resources */,
 				7B1E62D02AC444C000F5A2D5 /* StarshipsTableViewCell.xib in Resources */,
+				7BBDCE4F2ACB01030066B390 /* Monoton-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +545,7 @@
 				7B4815802AC3192D002004DA /* StarshipsViewModel.swift in Sources */,
 				7B4815922AC3222E002004DA /* PeopleViewController.swift in Sources */,
 				7B48156A2AC3139C002004DA /* SpeciesModel.swift in Sources */,
+				7BBDCE482ACAE9500066B390 /* UIImageViewExtension.swift in Sources */,
 				7B48158A2AC31E58002004DA /* PlanetsViewModel.swift in Sources */,
 				7B48153A2AC1C30E002004DA /* StarshipsViewController.swift in Sources */,
 				7B1E62DB2AC445B900F5A2D5 /* FilmsTableViewCell.swift in Sources */,
@@ -495,8 +561,10 @@
 				7B1E62E32AC445D300F5A2D5 /* PlanetsTableViewCell.swift in Sources */,
 				7B4815522AC1C3CE002004DA /* Endpoint.swift in Sources */,
 				7B4815712AC314DE002004DA /* VehiclesResultsModel.swift in Sources */,
+				7BB789612ACAE518001032BC /* CategoriesView.swift in Sources */,
 				7B4815622AC31239002004DA /* PeopleResultsModel.swift in Sources */,
 				7B4815382AC1C30E002004DA /* SceneDelegate.swift in Sources */,
+				7B1E62E72AC446AE00F5A2D5 /* InitialViewController.swift in Sources */,
 				7B48155B2AC3109A002004DA /* PlanetsModel.swift in Sources */,
 				7B4815582AC1C6F9002004DA /* ServiceError.swift in Sources */,
 				7B1E62CF2AC444C000F5A2D5 /* StarshipsTableViewCell.swift in Sources */,
@@ -654,6 +722,7 @@
 				DEVELOPMENT_TEAM = KTK732WRHB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StarWars/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -682,6 +751,7 @@
 				DEVELOPMENT_TEAM = KTK732WRHB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StarWars/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -722,6 +792,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7BBDCE432ACAE8CE0066B390 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7BBDCE442ACAE8CE0066B390 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BBDCE432ACAE8CE0066B390 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7B48152A2AC1C30E002004DA /* Project object */;
 }
