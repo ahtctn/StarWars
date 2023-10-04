@@ -115,7 +115,34 @@ enum Constants {
             static let image4: String = "https://static1.moviewebimages.com/wordpress/wp-content/uploads/2023/07/ilum-star-wars.jpg?q=50&fit=crop&w=1500&dpr=1.5"
             static let image5: String = "https://movieweb.com/star-wars-most-important-planets-and-moons/#ilum"
         }
+    }
+    
+    enum StoryboardIDs {
+        static let films: String = "FilmsViewController"
+        static let people: String = "PeopleViewController"
+        static let planets: String = "PlanetsViewController"
+        static let species: String = "SpeciesViewController"
+        static let starships: String = "StarshipsViewController"
+        static let vehicles: String = "VehiclesViewController"
         
+        enum Films {
+            static let errorMessage: String = "Navigation error in FilmsViewController"
+        }
+        enum People {
+            static let errorMessage: String = "Navigation error in PeopleViewController"
+        }
+        enum Planets {
+            static let errorMessage: String = "Navigation error in PlanetsViewController"
+        }
+        enum Species {
+            static let errorMessage: String = "Navigation error in SpeciesViewController"
+        }
+        enum Starships {
+            static let errorMessage: String = "Navigation error in StarshipsViewController"
+        }
+        enum Vehicles {
+            static let errorMessage: String = "Navigation error in VehiclesViewController"
+        }
     }
 }
 

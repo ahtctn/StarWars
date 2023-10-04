@@ -11,6 +11,7 @@ class CategoriesView: UIView {
     @IBOutlet weak var categoriesButton: UIButton!
     @IBOutlet weak var categoriesImage: UIImageView!
     @IBOutlet weak var categoriesLabel: UILabel!
+    var id: UUID?
     
     static let nibName: String = "CategoriesView"
     
@@ -41,6 +42,56 @@ class CategoriesView: UIView {
     }
     
     @IBAction func categoriesButtonTapped(_ sender: UIButton) {
-        print("categories button tapped.")
+        switch sender.tag {
+        case SelectedButtonTag.FilmsButton.rawValue:
+            goToNavigationViewController(storyboardId: Constants.StoryboardIDs.films,
+                                         errorMessage: Constants.StoryboardIDs.Films.errorMessage,
+                                         viewController: FilmsViewController.self)
+            
+        case SelectedButtonTag.PeopleButton.rawValue:
+            goToNavigationViewController(storyboardId: Constants.StoryboardIDs.people,
+                                         errorMessage: Constants.StoryboardIDs.People.errorMessage,
+                                         viewController: PeopleViewController.self)
+            
+        case SelectedButtonTag.PlanetsButton.rawValue:
+            goToNavigationViewController(storyboardId: Constants.StoryboardIDs.planets,
+                                         errorMessage: Constants.StoryboardIDs.Planets.errorMessage,
+                                         viewController: PlanetsViewController.self)
+            
+        case SelectedButtonTag.SpeciesButton.rawValue:
+            goToNavigationViewController(storyboardId: Constants.StoryboardIDs.species,
+                                         errorMessage: Constants.StoryboardIDs.Species.errorMessage,
+                                         viewController: SpeciesViewController.self)
+            
+        case SelectedButtonTag.StarshipsButton.rawValue:
+            goToNavigationViewController(storyboardId: Constants.StoryboardIDs.starships,
+                                         errorMessage: Constants.StoryboardIDs.Starships.errorMessage,
+                                         viewController: StarshipsViewController.self)
+            
+        case SelectedButtonTag.VehiclesButton.rawValue:
+            goToNavigationViewController(storyboardId: Constants.StoryboardIDs.vehicles,
+                                         errorMessage: Constants.StoryboardIDs.Vehicles.errorMessage,
+                                         viewController: VehiclesViewController.self)
+            
+        default:
+            print("Error happened.")
+        }
     }
+    
+    private func goToNavigationViewController<T: UIViewController>(storyboardId: String, errorMessage: String, viewController: T.Type){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: storyboardId) as? T else { fatalError(errorMessage)}
+        if let navigationController = self.window?.rootViewController as? UINavigationController {
+            navigationController.pushViewController(viewController, animated: true)
+        } else { fatalError(errorMessage) }
+    }
+}
+
+enum SelectedButtonTag: Int {
+    case FilmsButton
+    case PeopleButton
+    case PlanetsButton
+    case SpeciesButton
+    case StarshipsButton
+    case VehiclesButton
 }
