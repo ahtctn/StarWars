@@ -10,6 +10,7 @@ import UIKit
 class CategoriesView: UIView {
     @IBOutlet weak var categoriesButton: UIButton!
     @IBOutlet weak var categoriesImage: UIImageView!
+    @IBOutlet weak var categoriesLabel: UILabel!
     
     static let nibName: String = "CategoriesView"
     
@@ -35,8 +36,11 @@ class CategoriesView: UIView {
     }
     
     func setUIElements(categoriesLabel: String, categoriesImage: String) {
-        self.categoriesButton.setTitle(categoriesLabel, for: .normal)
+        self.categoriesLabel.text = categoriesLabel
         self.categoriesImage.setImage(with: categoriesImage)
     }
     
+    @IBAction func categoriesButtonTapped(_ sender: UIButton) {
+        print("categories button tapped.")
+    }
 }

@@ -7,10 +7,17 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="RubikMonoOne-Regular.ttf">
+            <string>RubikMonoOne-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoriesView" customModule="StarWars" customModuleProvider="target">
             <connections>
+                <outlet property="categoriesButton" destination="PVB-Sw-uIG" id="SwQ-qJ-zXH"/>
                 <outlet property="categoriesImage" destination="ZFI-gC-oiL" id="Dnx-U3-8io"/>
+                <outlet property="categoriesLabel" destination="cGY-Hg-pXE" id="0ZJ-ja-9WG"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -25,20 +32,28 @@
                     <rect key="frame" x="20" y="0.0" width="350" height="100"/>
                     <color key="tintColor" systemColor="systemYellowColor"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button">
-                        <fontDescription key="titleFontDescription" name="RubikMonoOne-Regular" family="Rubik Mono One" pointSize="48"/>
-                    </buttonConfiguration>
+                    <buttonConfiguration key="configuration" style="plain"/>
                     <connections>
-                        <action selector="categoriesButtonTapped:" destination="-1" eventType="touchUpInside" id="oZz-ny-qlB"/>
+                        <action selector="categoriesButtonTapped:" destination="-1" eventType="touchUpInside" id="MyU-m7-2Vw"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGY-Hg-pXE">
+                    <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
+                    <fontDescription key="fontDescription" name="RubikMonoOne-Regular" family="Rubik Mono One" pointSize="33"/>
+                    <color key="textColor" systemColor="systemOrangeColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="PVB-Sw-uIG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9oe-32-TDX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cGY-Hg-pXE" secondAttribute="trailing" id="CKm-dF-onn"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="cGY-Hg-pXE" secondAttribute="bottom" id="Es9-tH-wwT"/>
+                <constraint firstItem="cGY-Hg-pXE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Flc-hW-ubX"/>
                 <constraint firstItem="PVB-Sw-uIG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="FmT-oi-oCC"/>
                 <constraint firstItem="ZFI-gC-oiL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FpP-xf-bdc"/>
+                <constraint firstItem="cGY-Hg-pXE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="JF5-bC-F8l"/>
                 <constraint firstAttribute="bottom" secondItem="ZFI-gC-oiL" secondAttribute="bottom" id="Mbc-jP-mUP"/>
                 <constraint firstItem="ZFI-gC-oiL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="P3J-qx-IHO"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ZFI-gC-oiL" secondAttribute="trailing" id="hpV-uf-bTU"/>
@@ -52,6 +67,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -39,7 +39,4 @@ class InitialViewController: UIViewController {
                                   categoriesImage: Constants.CategoriesImages.Planets.planets.randomElement()!)
     }
     
-    @IBAction func categoriesButtonTapped(_ sender: UIButton) {
-        
-    }
 }
