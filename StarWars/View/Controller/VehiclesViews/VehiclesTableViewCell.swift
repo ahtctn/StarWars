@@ -9,6 +9,9 @@ import UIKit
 
 class VehiclesTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var crewLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,6 +21,11 @@ class VehiclesTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func configure(with item: VehiclesResultsModel) {
+        self.nameLabel.text = item.name
+        self.crewLabel.text = item.crew
     }
     
 }

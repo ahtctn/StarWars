@@ -144,5 +144,14 @@ enum Constants {
             static let errorMessage: String = "Navigation error in VehiclesViewController"
         }
     }
+    
+    enum CellIDs {
+        static let starshipsTableViewCell: String = "StarshipsTableViewCellID"
+        static let vehiclesTableViewCell: String = "VehiclesTableViewCellID"
+        static let speciesTableViewCell: String = "SpeciesTableViewCellID"
+        static let filmsTableViewCell: String = "FilmsTableViewCellID"
+        static let peopleTableViewCell: String = "PeopleTableViewCellID"
+        static let planetsTableViewCell: String = "PlanetsTableViewCellID"
+    }
 }
 

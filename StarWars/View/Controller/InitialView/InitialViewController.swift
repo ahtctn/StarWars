@@ -21,19 +21,10 @@ class InitialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUIElements()
-        
-        
+        categoriesButton()
     }
     
     private func setUIElements() {
-        
-        starshipsView.categoriesButton.tag = SelectedButtonTag.StarshipsButton.rawValue
-        vehiclesView.categoriesButton.tag = SelectedButtonTag.VehiclesButton.rawValue
-        speciesView.categoriesButton.tag = SelectedButtonTag.SpeciesButton.rawValue
-        filmsView.categoriesButton.tag = SelectedButtonTag.FilmsButton.rawValue
-        peopleView.categoriesButton.tag = SelectedButtonTag.PeopleButton.rawValue
-        planetsView.categoriesButton.tag = SelectedButtonTag.PlanetsButton.rawValue
-        
         starshipsView.setUIElements(categoriesLabel: Constants.CategoriesImages.Starships.name,
                                     categoriesImage: Constants.CategoriesImages.Starships.starships.randomElement()!)
         vehiclesView.setUIElements(categoriesLabel: Constants.CategoriesImages.Vehicles.name,
@@ -47,5 +38,15 @@ class InitialViewController: UIViewController {
         planetsView.setUIElements(categoriesLabel: Constants.CategoriesImages.Planets.name,
                                   categoriesImage: Constants.CategoriesImages.Planets.planets.randomElement()!)
     }
+    
+    private func categoriesButton() {
+        starshipsView.categoriesButton.tag = SelectedButtonTag.StarshipsButton.rawValue
+        vehiclesView.categoriesButton.tag = SelectedButtonTag.VehiclesButton.rawValue
+        speciesView.categoriesButton.tag = SelectedButtonTag.SpeciesButton.rawValue
+        filmsView.categoriesButton.tag = SelectedButtonTag.FilmsButton.rawValue
+        peopleView.categoriesButton.tag = SelectedButtonTag.PeopleButton.rawValue
+        planetsView.categoriesButton.tag = SelectedButtonTag.PlanetsButton.rawValue
+    }
+    
     
 }
