@@ -8,7 +8,7 @@
 import Foundation
 
 class StarshipsViewModel {
-    var starshipsModel: StarshipsModel?
+    var starshipsModel: [StarshipResultsModel] = []
     var eventHandler: ((_ event: Event) -> Void)?
     
     func getStarshipData() {
@@ -17,13 +17,21 @@ class StarshipsViewModel {
         NetworkManager.shared.getStarhipsData { result in
             switch result {
             case .success(let starships):
-                self.starshipsModel = starships
+                self.starshipsModel = starships.results
                 self.eventHandler?(.dataLoaded)
             case .failure(let error):
                 print("\(error.localizedDescription) Network error happened in StarshipsViewModel")
                 self.eventHandler?(.error(error))
             }
         }
+    }
+    
+    func numberOfRows() -> Int {
+        return self.starshipsModel.count
+    }
+    
+    func resultCell(at index: Int) -> StarshipResultsModel {
+        return self.starshipsModel[index]
     }
 }
 

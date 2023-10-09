@@ -8,7 +8,7 @@
 import Foundation
 
 class PeopleViewModel {
-    var peopleModel: PeopleModel?
+    var peopleModel: [PeopleResultsModel] = []
     var eventHandler: ((_ event: Event) -> Void)?
     
     func getPeopleData() {
@@ -16,13 +16,21 @@ class PeopleViewModel {
         NetworkManager.shared.getPeopleData { results in
             switch results {
             case .success(let people):
-                self.peopleModel = people
+                self.peopleModel = people.results
                 self.eventHandler?(.dataLoaded)
             case .failure(let error):
                 print("\(error.localizedDescription) Network Error happened in PeopleViewModel")
                 self.eventHandler?(.error(error))
             }
         }
+    }
+    
+    func numberOfRows() -> Int {
+        return self.peopleModel.count
+    }
+    
+    func resultCell(at index: Int) -> PeopleResultsModel {
+        return self.peopleModel[index]
     }
 }
 

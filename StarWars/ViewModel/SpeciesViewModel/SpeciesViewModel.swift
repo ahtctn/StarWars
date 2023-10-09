@@ -8,7 +8,7 @@
 import Foundation
 
 class SpeciesViewModel {
-    var speciesModel: SpeciesModel?
+    var speciesModel: [SpeciesResultsModel] = []
     var eventHandler: ((_ event: Event) -> Void)?
     
     func getSpeciesData() {
@@ -16,13 +16,21 @@ class SpeciesViewModel {
         NetworkManager.shared.getSpeciesData { results in
             switch results {
             case .success(let species):
-                self.speciesModel = species
+                self.speciesModel = species.results
                 self.eventHandler?(.dataLoaded)
             case .failure(let error):
                 print("\(error.localizedDescription) Network Error Happened in SpeciesViewModel")
                 self.eventHandler?(.error(error))
             }
         }
+    }
+    
+    func numberOfRows() -> Int {
+        return self.speciesModel.count
+    }
+    
+    func resultCell(at index: Int) -> SpeciesResultsModel {
+        return self.speciesModel[index]
     }
 }
 

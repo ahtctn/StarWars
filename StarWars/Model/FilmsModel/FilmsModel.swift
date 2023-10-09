@@ -10,5 +10,5 @@ import Foundation
 struct FilmsModel: Codable {
     let count: Int
     let next, previous: String?
-    let results: [FilmResultsModel]
+    let results: [FilmsResultsModel]
 }

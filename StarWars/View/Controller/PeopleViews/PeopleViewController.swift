@@ -9,12 +9,22 @@ import UIKit
 
 class PeopleViewController: UIViewController {
 
+    //MARK: OUTLETS
+    @IBOutlet weak var tableView: UITableView!
+    
+    //MARK: PROPERTIES
     let viewModel = PeopleViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         observeEvent()
+        delegations()
+    }
+    
+    private func delegations() {
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        self.tableView.register(UINib(nibName: Constants.NibName.people, bundle: nil), forCellReuseIdentifier: Constants.Cell.peopleCellID)
     }
     
     private func observeEvent() {
@@ -27,15 +37,30 @@ class PeopleViewController: UIViewController {
                 print(Constants.EventMessages.stopLoading)
             case .dataLoaded:
                 print(Constants.EventMessages.dataLoaded)
-                self?.setUI()
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
             case .error(let error):
                 print(error?.localizedDescription as Any)
             }
         }
     }
-    
-    private func setUI() {
-        
+}
+
+extension PeopleViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var item: PeopleResultsModel
+        item = self.viewModel.resultCell(at: indexPath.row)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Cell.peopleCellID, for: indexPath) as? PeopleTableViewCell else { return UITableViewCell() }
+        cell.configure(with: item)
+        return cell
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.viewModel.numberOfRows()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
 }

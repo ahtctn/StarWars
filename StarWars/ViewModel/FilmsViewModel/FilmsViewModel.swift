@@ -8,7 +8,7 @@
 import Foundation
 
 class FilmsViewModel {
-    var filmsModel: FilmsModel?
+    var filmsModel: [FilmsResultsModel] = []
     var eventHandler: ((_ event: Event) -> Void)?
     
     func getFilmsData() {
@@ -17,13 +17,21 @@ class FilmsViewModel {
         NetworkManager.shared.getFilmsData { results in
             switch results {
             case .success(let films):
-                self.filmsModel = films
+                self.filmsModel = films.results
                 self.eventHandler?(.dataLoaded)
             case .failure(let error):
                 print("\(error.localizedDescription) Network error happened in FilmsViewModel")
                 self.eventHandler?(.error(error))
             }
         }
+    }
+    
+    func numberOfRows() -> Int {
+        return self.filmsModel.count
+    }
+    
+    func resultCell(at index: Int) -> FilmsResultsModel {
+        return self.filmsModel[index]
     }
 }
 

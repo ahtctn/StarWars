@@ -44,7 +44,6 @@ enum Constants {
             
             static let image5: String = "https://www.cnet.com/a/img/resize/e03156f15130177842f1b09c1693523d30039154/hub/2019/10/22/aa2588e1-7293-438a-b745-873192c116ff/ship-han-falcon.jpg?auto=webp&width=1200"
         }
-        
         enum Vehicles {
             static let name: String = "Vehicles"
             
@@ -60,7 +59,6 @@ enum Constants {
             static let image4: String = "https://www.digitaltrends.com/wp-content/uploads/2015/12/Star-Wars-The-Force-Awakens-0006.jpg?fit=720%2C405&p=1"
             static let image5: String = "https://www.digitaltrends.com/wp-content/uploads/2015/08/Star-Wars-force-awakens.jpg?fit=720%2C480&p=1"
         }
-        
         enum Species {
             static let name: String = "Species"
             
@@ -72,7 +70,6 @@ enum Constants {
             static let image4: String = "https://static1.cbrimages.com/wordpress/wp-content/uploads/2018/05/star-wars-the-phantom-menace-gungan-army.jpg?q=50&fit=crop&w=750&dpr=1.5"
             static let image5: String = "https://static1.cbrimages.com/wordpress/wp-content/uploads/2018/02/Ewoks-in-Star-Wars.jpg?q=50&fit=crop&w=750&dpr=1.5"
         }
-        
         enum Films {
             static let name: String = "Films"
             
@@ -84,7 +81,6 @@ enum Constants {
             static let image4: String = "https://phantom-marca.unidadeditorial.es/bdee1b612d2756eea7d2b46f06894cb2/resize/828/f/jpg/assets/multimedia/imagenes/2023/05/04/16831803848910.jpg"
             static let image5: String = "https://media.wired.com/photos/62ce0a69540a1fd5ca4bd82a/master/pass/Star-Wars-Ranking-Culture-607402182.jpg"
         }
-        
         enum People {
             static let name: String = "People"
             
@@ -101,7 +97,6 @@ enum Constants {
             static let image4: String = "https://qph.cf2.quoracdn.net/main-qimg-a47b40698717c0456a71b0097f825453-lq"
             static let image5: String = "https://qph.cf2.quoracdn.net/main-qimg-cc029a914e3fbaa8e50715be5984e56c-lq"
         }
-        
         enum Planets {
             static let name: String = "Planets"
             
@@ -145,13 +140,22 @@ enum Constants {
         }
     }
     
-    enum CellIDs {
-        static let starshipsTableViewCell: String = "StarshipsTableViewCellID"
-        static let vehiclesTableViewCell: String = "VehiclesTableViewCellID"
-        static let speciesTableViewCell: String = "SpeciesTableViewCellID"
-        static let filmsTableViewCell: String = "FilmsTableViewCellID"
-        static let peopleTableViewCell: String = "PeopleTableViewCellID"
-        static let planetsTableViewCell: String = "PlanetsTableViewCellID"
+    enum Cell {
+        static let starhipsCellID: String = "StarshipsCellID"
+        static let vehiclesCellID: String = "VehiclesCellID"
+        static let speciesCellID: String = "SpeciesCellID"
+        static let filmsCellID: String = "FilmsCellID"
+        static let peopleCellID: String = "PeopleCellID"
+        static let planetsCellID: String = "PlanetsCellID"
+    }
+    
+    enum NibName {
+        static let starships: String = "StarshipsTableViewCell"
+        static let vehicles: String = "VehiclesTableViewCell"
+        static let species: String = "SpeciesTableViewCell"
+        static let films: String = "FilmsTableViewCell"
+        static let people: String = "PeopleTableViewCell"
+        static let planets: String = "PlanetsTableViewCell"
     }
 }
 

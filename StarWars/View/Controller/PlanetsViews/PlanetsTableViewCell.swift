@@ -9,15 +9,19 @@ import UIKit
 
 class PlanetsTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var climateLabel: UILabel!
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
     
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
+    func configure(with item: PlanetsResultsModel) {
+        self.nameLabel.text = item.name
+        self.climateLabel.text = item.climate
+    }
 }

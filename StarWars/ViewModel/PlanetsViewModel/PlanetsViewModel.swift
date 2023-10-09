@@ -8,7 +8,7 @@
 import Foundation
 
 class PlanetsViewModel {
-    var planetsModel: PlanetsModel?
+    var planetsModel: [PlanetsResultsModel] = []
     var eventHandler: ((_ event: Event) -> Void)?
 
     func getPlanetsData() {
@@ -16,13 +16,21 @@ class PlanetsViewModel {
         NetworkManager.shared.getPlanetsData { results in
             switch results {
             case .success(let planets):
-                self.planetsModel = planets
+                self.planetsModel = planets.results
                 self.eventHandler?(.dataLoaded)
             case .failure(let error):
                 print("\(error.localizedDescription) Network error happened in PlanetsViewModel")
                 self.eventHandler?(.error(error))
             }
         }
+    }
+    
+    func numberOfRows() -> Int {
+        return self.planetsModel.count
+    }
+    
+    func resultCell(at index: Int) -> PlanetsResultsModel {
+        return self.planetsModel[index]
     }
 }
 

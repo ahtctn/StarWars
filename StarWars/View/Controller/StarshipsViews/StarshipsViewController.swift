@@ -8,13 +8,22 @@
 import UIKit
 
 class StarshipsViewController: UIViewController {
+    //MARK: OUTLETS
+    @IBOutlet weak var tableView: UITableView!
     
+    //MARK: PROPERTIES
     let viewModel = StarshipsViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         observeEvent()
-        //deneme()
+        delegations()
+    }
+    
+    private func delegations() {
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        self.tableView.register(UINib(nibName: Constants.NibName.starships, bundle: nil), forCellReuseIdentifier: Constants.Cell.starhipsCellID)
     }
     
     private func observeEvent() {
@@ -27,34 +36,33 @@ class StarshipsViewController: UIViewController {
                 print(Constants.EventMessages.stopLoading)
             case .dataLoaded:
                 print(Constants.EventMessages.dataLoaded)
-                self?.setUI()
-                self?.deneme()
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
             case .error(let error):
                 print(error?.localizedDescription as Any)
             }
         }
     }
-    
-    private func setUI() {
+}
+
+extension StarshipsViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var item: StarshipResultsModel
         
+        item = self.viewModel.resultCell(at: indexPath.row)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Cell.starhipsCellID, for: indexPath) as? StarshipsTableViewCell else { return UITableViewCell() }
+        cell.configure(with: item)
+        return cell
     }
-    private func deneme() {
-        DispatchQueue.main.async {
-            
-            guard let starships = self.viewModel.starshipsModel else { return }
-            let starshipsData = starships.results
-            
-            for starship in starshipsData {
-                print(starship.cargoCapacity)
-                print("Films: \(starship.films)")
-                print("Name: \(starship.name)")
-                print("Class: \(starship.starshipClass)")
-                print("açıldı")
-            }
-            
-        }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.viewModel.numberOfRows()
     }
-
-
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        print(self.tableView.frame.height)
+        return 100
+    }
 }
 
