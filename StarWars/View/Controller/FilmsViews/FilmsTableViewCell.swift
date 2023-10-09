@@ -10,7 +10,7 @@ import UIKit
 class FilmsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var charactersLabel: UILabel!
+    @IBOutlet weak var infoLabel: UILabel!
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -22,11 +22,8 @@ class FilmsTableViewCell: UITableViewCell {
     
     func configure(with item: FilmsResultsModel) {
         self.nameLabel.text = item.title
-        let characters = item.characters
+        self.infoLabel.text = "\(item.director)- \(item.created)"
         
-        for character in characters {
-            self.charactersLabel.text = "\(character)- "
-        }
     }
     
 }

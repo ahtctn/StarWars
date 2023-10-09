@@ -149,6 +149,15 @@ enum Constants {
         static let planetsCellID: String = "PlanetsCellID"
     }
     
+    enum NavigationName {
+        static let films: String = "Films"
+        static let people: String = "People"
+        static let planets: String = "Planets"
+        static let species: String = "Species"
+        static let starships: String = "Starships"
+        static let vehicles: String = "Vehicles"
+    }
+    
     enum NibName {
         static let starships: String = "StarshipsTableViewCell"
         static let vehicles: String = "VehiclesTableViewCell"

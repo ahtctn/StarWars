@@ -19,6 +19,11 @@ class SpeciesViewController: UIViewController {
         super.viewDidLoad()
         delegations()
         observeEvent()
+        setUI()
+    }
+    
+    private func setUI() {
+        self.navigationItem.title = Constants.NavigationName.species
     }
     
     private func delegations() {

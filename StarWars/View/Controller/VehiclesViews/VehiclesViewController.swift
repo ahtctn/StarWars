@@ -18,6 +18,10 @@ class VehiclesViewController: UIViewController {
         super.viewDidLoad()
         observeEvent()
         delegations()
+        setUI()
+    }
+    private func setUI() {
+        self.navigationItem.title = Constants.NavigationName.vehicles
     }
     
     private func delegations() {

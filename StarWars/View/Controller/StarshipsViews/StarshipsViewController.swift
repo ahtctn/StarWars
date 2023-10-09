@@ -18,6 +18,11 @@ class StarshipsViewController: UIViewController {
         super.viewDidLoad()
         observeEvent()
         delegations()
+        setUI()
+    }
+    
+    private func setUI() {
+        self.navigationItem.title = Constants.NavigationName.starships
     }
     
     private func delegations() {

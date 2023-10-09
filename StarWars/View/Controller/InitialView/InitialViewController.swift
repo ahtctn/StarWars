@@ -17,6 +17,8 @@ class InitialViewController: UIViewController {
     @IBOutlet weak var peopleView: CategoriesView!
     @IBOutlet weak var planetsView: CategoriesView!
     
+    //MARK: PROPERTIES
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUIElements()
@@ -24,6 +26,7 @@ class InitialViewController: UIViewController {
     }
     
     private func setUIElements() {
+        
         starshipsView.setUIElements(categoriesLabel: Constants.CategoriesImages.Starships.name,
                                     categoriesImage: Constants.CategoriesImages.Starships.starships.randomElement()!)
         vehiclesView.setUIElements(categoriesLabel: Constants.CategoriesImages.Vehicles.name,
@@ -39,7 +42,6 @@ class InitialViewController: UIViewController {
     }
     
     private func categoriesButton() {
-        
         starshipsView.categoriesButton.tag = SelectedButtonTag.StarshipsButton.rawValue
         vehiclesView.categoriesButton.tag = SelectedButtonTag.VehiclesButton.rawValue
         speciesView.categoriesButton.tag = SelectedButtonTag.SpeciesButton.rawValue
@@ -47,7 +49,4 @@ class InitialViewController: UIViewController {
         peopleView.categoriesButton.tag = SelectedButtonTag.PeopleButton.rawValue
         planetsView.categoriesButton.tag = SelectedButtonTag.PlanetsButton.rawValue
     }
-    
-    
-    
 }

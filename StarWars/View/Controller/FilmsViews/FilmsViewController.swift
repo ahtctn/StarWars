@@ -18,6 +18,11 @@ class FilmsViewController: UIViewController {
         super.viewDidLoad()
         delegations()
         observeEvent()
+        setUI()
+    }
+    
+    private func setUI() {
+        self.navigationItem.title = Constants.NavigationName.films
     }
     
     private func delegations() {

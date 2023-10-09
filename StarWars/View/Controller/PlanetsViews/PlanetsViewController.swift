@@ -17,6 +17,11 @@ class PlanetsViewController: UIViewController {
         super.viewDidLoad()
         observeEvent()
         delegations()
+        setUI()
+    }
+    
+    private func setUI() {
+        self.navigationItem.title = Constants.NavigationName.planets
     }
     
     private func delegations() {
