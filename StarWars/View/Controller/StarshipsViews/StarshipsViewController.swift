@@ -35,6 +35,7 @@ class StarshipsViewController: UIViewController {
             case .stopLoading:
                 print(Constants.EventMessages.stopLoading)
             case .dataLoaded:
+                print(Constants.NibName.starships)
                 print(Constants.EventMessages.dataLoaded)
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()

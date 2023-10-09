@@ -36,6 +36,7 @@ class PeopleViewController: UIViewController {
             case .stopLoading:
                 print(Constants.EventMessages.stopLoading)
             case .dataLoaded:
+                print(Constants.NibName.people)
                 print(Constants.EventMessages.dataLoaded)
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()

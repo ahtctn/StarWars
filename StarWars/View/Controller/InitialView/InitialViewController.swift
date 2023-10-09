@@ -9,8 +9,7 @@ import UIKit
 
 class InitialViewController: UIViewController {
     
-    //Starships, Vehicles, Species, Films, People, Planets
-    
+    //MARK: OUTLETS
     @IBOutlet weak var starshipsView: CategoriesView!
     @IBOutlet weak var vehiclesView: CategoriesView!
     @IBOutlet weak var speciesView: CategoriesView!
@@ -40,6 +39,7 @@ class InitialViewController: UIViewController {
     }
     
     private func categoriesButton() {
+        
         starshipsView.categoriesButton.tag = SelectedButtonTag.StarshipsButton.rawValue
         vehiclesView.categoriesButton.tag = SelectedButtonTag.VehiclesButton.rawValue
         speciesView.categoriesButton.tag = SelectedButtonTag.SpeciesButton.rawValue
@@ -47,6 +47,7 @@ class InitialViewController: UIViewController {
         peopleView.categoriesButton.tag = SelectedButtonTag.PeopleButton.rawValue
         planetsView.categoriesButton.tag = SelectedButtonTag.PlanetsButton.rawValue
     }
+    
     
     
 }

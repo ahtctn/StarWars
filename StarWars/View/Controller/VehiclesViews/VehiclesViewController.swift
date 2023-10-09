@@ -35,6 +35,7 @@ class VehiclesViewController: UIViewController {
             case .stopLoading:
                 print(Constants.EventMessages.stopLoading)
             case .dataLoaded:
+                print(Constants.NibName.vehicles)
                 print(Constants.EventMessages.dataLoaded)
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()

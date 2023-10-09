@@ -34,6 +34,7 @@ class PlanetsViewController: UIViewController {
             case .stopLoading:
                 print(Constants.EventMessages.stopLoading)
             case .dataLoaded:
+                print(Constants.NibName.planets)
                 print(Constants.EventMessages.dataLoaded)
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()
