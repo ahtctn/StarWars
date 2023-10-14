@@ -33,11 +33,28 @@
                     <tabBarItem key="tabBarItem" title="Species" image="note.text" catalog="system" id="RdT-n2-YLp"/>
                     <connections>
                         <outlet property="tableView" destination="Og6-9l-6Xt" id="6A6-ba-6WK"/>
+                        <segue destination="ZEc-2c-tjl" kind="show" identifier="SpeciesDetailID" id="g7h-nH-aaJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yp0-lT-Vev" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-632" y="508"/>
+        </scene>
+        <!--Starships Details View Controller-->
+        <scene sceneID="39b-TG-40a">
+            <objects>
+                <viewController storyboardIdentifier="StarshipsCellID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="R37-2u-b8Q" customClass="StarshipsDetailsViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NqM-Zf-8Zb">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="e4b-lV-UEw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FJj-Dz-H7W"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CV1-WC-F58" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="240" y="-184"/>
         </scene>
         <!--Films-->
         <scene sceneID="C4k-Zo-1lI">
@@ -64,11 +81,28 @@
                     <tabBarItem key="tabBarItem" title="Films" image="tv" catalog="system" id="Ymu-ND-Gvc"/>
                     <connections>
                         <outlet property="tableView" destination="ead-wT-N8D" id="Vw0-S8-igR"/>
+                        <segue destination="ndQ-4H-CMi" kind="show" identifier="FilmsDetailID" id="kmw-SI-7TJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zk1-GP-hD4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="129.76744186046511" y="-184.12017167381975"/>
+            <point key="canvasLocation" x="1081" y="-184"/>
+        </scene>
+        <!--Films Details View Controller-->
+        <scene sceneID="1v9-dq-VoW">
+            <objects>
+                <viewController storyboardIdentifier="FilmsCellID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ndQ-4H-CMi" customClass="FilmsDetailsViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gKP-86-2lf">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="oQ8-VP-utr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Ft-xZ-EUk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0zf-i9-bm5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1948" y="-184"/>
         </scene>
         <!--Vehicles-->
         <scene sceneID="6pG-Ai-DDI">
@@ -95,6 +129,7 @@
                     <tabBarItem key="tabBarItem" title="Vehicles" image="car" catalog="system" id="SRe-jt-Ynt"/>
                     <connections>
                         <outlet property="tableView" destination="EQF-nS-ads" id="bUC-nh-ktZ"/>
+                        <segue destination="hyz-dR-fIt" kind="show" identifier="VehiclesDetailID" id="pag-1N-M1B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YdP-u4-a0d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -203,11 +238,28 @@
                     <tabBarItem key="tabBarItem" title="Starships" image="star" catalog="system" id="obq-m1-Abb"/>
                     <connections>
                         <outlet property="tableView" destination="spf-mP-skr" id="iEU-xg-s8b"/>
+                        <segue destination="R37-2u-b8Q" kind="show" identifier="StarshipsDetailID" id="Bd6-nN-KzF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-632.09302325581393" y="-184.12017167381975"/>
+        </scene>
+        <!--Species Details View Controller-->
+        <scene sceneID="Mlk-ZY-aJh">
+            <objects>
+                <viewController storyboardIdentifier="SpeciesCellID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZEc-2c-tjl" customClass="SpeciesDetailsViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gie-yq-sUN">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="mvc-1c-5x8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nGn-rW-X89"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OAx-dj-Aha" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="240" y="508"/>
         </scene>
         <!--Planets-->
         <scene sceneID="nJt-ch-yWC">
@@ -234,11 +286,44 @@
                     <tabBarItem key="tabBarItem" title="Planets" image="circle.fill" catalog="system" id="kag-6R-ka4"/>
                     <connections>
                         <outlet property="tableView" destination="ulh-bN-bUM" id="yPa-FN-xOe"/>
+                        <segue destination="tev-X2-vLt" kind="show" identifier="PlanetsCellID" id="tS2-MA-2c2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PhW-Wc-d3F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131" y="508"/>
+            <point key="canvasLocation" x="1081" y="508"/>
+        </scene>
+        <!--Planets Details View Controller-->
+        <scene sceneID="j5W-gT-9yZ">
+            <objects>
+                <viewController storyboardIdentifier="PlanetsCellID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tev-X2-vLt" customClass="PlanetsDetailsViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fT1-wT-SKz">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4uf-bV-hWA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="m5t-3h-JhF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oUW-wR-80h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1948" y="508"/>
+        </scene>
+        <!--Vehicles Details View Controller-->
+        <scene sceneID="n0a-34-BTi">
+            <objects>
+                <viewController storyboardIdentifier="VehiclesCellID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hyz-dR-fIt" customClass="VehiclesDetailsViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="40F-Ec-0si">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ewd-Dd-jmY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Dm9-jv-4zL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qfh-NO-b44" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="240" y="-890"/>
         </scene>
         <!--People-->
         <scene sceneID="rLY-Ni-G7p">
@@ -265,11 +350,28 @@
                     <tabBarItem key="tabBarItem" title="People" image="person.3.fill" catalog="system" id="LN5-zo-a4F"/>
                     <connections>
                         <outlet property="tableView" destination="k0R-9v-gY9" id="qdV-ed-lZi"/>
+                        <segue destination="Ocz-g8-3Kv" kind="show" identifier="PeopleDetailID" id="yLx-2Q-0Sa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQI-0L-wqt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.16279069767441" y="-890.34334763948505"/>
+            <point key="canvasLocation" x="1083" y="-890"/>
+        </scene>
+        <!--People Details View Controller-->
+        <scene sceneID="sm6-BL-8Qf">
+            <objects>
+                <viewController storyboardIdentifier="PeopleCellID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ocz-g8-3Kv" customClass="PeopleDetailsViewController" customModule="StarWars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y3f-yk-3LW">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="aRJ-cK-jFw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cdO-5I-8Bt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ia-3u-keT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1948" y="-890"/>
         </scene>
     </scenes>
     <resources>

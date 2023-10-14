@@ -68,4 +68,20 @@ extension VehiclesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedVehicle: VehiclesResultsModel
+        selectedVehicle = viewModel.resultCell(at: indexPath.row)
+        performSegue(withIdentifier: Constants.Detail.vehiclesDetail, sender: selectedVehicle)
+        self.tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if case segue.identifier = Constants.Cell.vehiclesCellID {
+            if let detailVC = segue.destination as? VehiclesDetailsViewController,
+               let selectedVehicle = sender as? VehiclesResultsModel {
+                detailVC.vehicles = selectedVehicle
+            }
+        }
+    }
 }

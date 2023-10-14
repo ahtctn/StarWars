@@ -70,5 +70,23 @@ extension StarshipsViewController: UITableViewDataSource, UITableViewDelegate {
         print(self.tableView.frame.height)
         return 100
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedStarship: StarshipResultsModel
+        selectedStarship = viewModel.resultCell(at: indexPath.row)
+        performSegue(withIdentifier: Constants.Detail.starshipsDetail, sender: selectedStarship)
+        self.tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if case segue.identifier = Constants.Cell.starhipsCellID {
+            if case segue.identifier = Constants.Cell.starhipsCellID {
+                if let detailVC = segue.destination as? StarshipsDetailsViewController,
+                   let selectedStarship = sender as? StarshipResultsModel {
+                    detailVC.starships = selectedStarship
+                }
+            }
+        }
+    }
 }
 

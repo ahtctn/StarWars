@@ -69,4 +69,20 @@ extension FilmsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedFilm: FilmsResultsModel
+        selectedFilm = viewModel.resultCell(at: indexPath.row)
+        performSegue(withIdentifier: Constants.Detail.filmsDetail, sender: selectedFilm)
+        self.tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if case segue.identifier = Constants.Cell.filmsCellID {
+            if let detailVC = segue.destination as? FilmsDetailsViewController,
+               let selectedFilm = sender as? FilmsResultsModel {
+                detailVC.films = selectedFilm
+            }
+        }
+    }
 }

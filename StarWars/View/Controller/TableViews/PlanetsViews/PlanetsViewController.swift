@@ -67,4 +67,20 @@ extension PlanetsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedPlanet: PlanetsResultsModel
+        selectedPlanet = viewModel.resultCell(at: indexPath.row)
+        performSegue(withIdentifier: Constants.Detail.planetsDetail, sender: selectedPlanet)
+        self.tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if case segue.identifier = Constants.Cell.planetsCellID {
+            if let detailVC = segue.destination as? PlanetsDetailsViewController,
+               let selectedPlanet = sender as? PlanetsResultsModel {
+                detailVC.planets = selectedPlanet
+            }
+        }
+    }
 }

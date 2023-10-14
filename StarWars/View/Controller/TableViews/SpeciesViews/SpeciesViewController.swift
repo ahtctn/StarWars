@@ -1,5 +1,5 @@
 //
-//  PeopleViewController.swift
+//  SpeciesViewController.swift
 //  StarWars
 //
 //  Created by Ahmet Ali ÇETİN on 26.09.2023.
@@ -7,33 +7,33 @@
 
 import UIKit
 
-class PeopleViewController: UIViewController {
+class SpeciesViewController: UIViewController {
 
     //MARK: OUTLETS
     @IBOutlet weak var tableView: UITableView!
     
     //MARK: PROPERTIES
-    let viewModel = PeopleViewModel()
+    let viewModel = SpeciesViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        observeEvent()
         delegations()
+        observeEvent()
         setUI()
     }
     
     private func setUI() {
-        self.navigationItem.title = Constants.NavigationName.people
+        self.navigationItem.title = Constants.NavigationName.species
     }
     
     private func delegations() {
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        self.tableView.register(UINib(nibName: Constants.NibName.people, bundle: nil), forCellReuseIdentifier: Constants.Cell.peopleCellID)
+        self.tableView.register(UINib(nibName: Constants.NibName.species, bundle: nil), forCellReuseIdentifier: Constants.Cell.speciesCellID)
     }
     
     private func observeEvent() {
-        viewModel.getPeopleData()
+        viewModel.getSpeciesData()
         viewModel.eventHandler = { [weak self] event in
             switch event {
             case .loading:
@@ -41,7 +41,7 @@ class PeopleViewController: UIViewController {
             case .stopLoading:
                 print(Constants.EventMessages.stopLoading)
             case .dataLoaded:
-                print(Constants.NibName.people)
+                print(Constants.NibName.species)
                 print(Constants.EventMessages.dataLoaded)
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()
@@ -53,11 +53,11 @@ class PeopleViewController: UIViewController {
     }
 }
 
-extension PeopleViewController: UITableViewDelegate, UITableViewDataSource {
+extension SpeciesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var item: PeopleResultsModel
+        var item: SpeciesResultsModel
         item = self.viewModel.resultCell(at: indexPath.row)
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Cell.peopleCellID, for: indexPath) as? PeopleTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Cell.speciesCellID, for: indexPath) as? SpeciesTableViewCell else { return UITableViewCell() }
         cell.configure(with: item)
         return cell
     }
@@ -68,5 +68,21 @@ extension PeopleViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedSpecie: SpeciesResultsModel
+        selectedSpecie = viewModel.resultCell(at: indexPath.row)
+        performSegue(withIdentifier: Constants.Detail.speciesDetail, sender: selectedSpecie)
+        self.tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if case segue.identifier = Constants.Cell.speciesCellID {
+            if let detailVC = segue.destination as? SpeciesDetailsViewController,
+               let selectedSpecie = sender as? SpeciesResultsModel {
+                detailVC.species = selectedSpecie
+            }
+        }
     }
 }
